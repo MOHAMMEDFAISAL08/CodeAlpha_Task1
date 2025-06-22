@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="title">My Image Gallery</h1>
+
+  <div class="filters">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('nature')">Nature</button>
+    <button onclick="filterGallery('animal')">Animal</button>
+    <button onclick="filterGallery('people')">People</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/id/1015/400" class="nature" onclick="openLightbox(this)" />
+    <img src="https://picsum.photos/id/1016/400" class="nature" onclick="openLightbox(this)" />
+    <img src="https://picsum.photos/id/1020/400" class="animal" onclick="openLightbox(this)" />
+    <img src="https://picsum.photos/id/1024/400" class="animal" onclick="openLightbox(this)" />
+    <img src="https://picsum.photos/id/1027/400" class="people" onclick="openLightbox(this)" />
+    <img src="https://picsum.photos/id/1035/400" class="people" onclick="openLightbox(this)" />
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img class="lightbox-img" id="lightbox-img" />
+    <div class="lightbox-nav">
+      <button onclick="prevImage()">‹</button>
+      <button onclick="nextImage()">›</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
